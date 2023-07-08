@@ -1,0 +1,15 @@
+@import url("../public/assets/css/all.css");
+@import url("../public/assets/css/animate.css");
+@import url("../public/assets/css/bootstrap.min.css");
+@import url("../public/assets/css/boxicons.min.css");
+@import url("../public/assets/css/bootstrap-icons.css");
+@import url("../public/assets/css/swiper-bundle.css");
+@import url("../public/assets/css/style.css");
+
+.invalid-feedback {
+    width: 100%;
+    display: block;
+    margin-top: 0.25rem;
+    font-size: .875em;
+    color: #dc3545;
+}

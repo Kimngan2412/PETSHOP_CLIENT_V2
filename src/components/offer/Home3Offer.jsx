@@ -73,7 +73,7 @@ function Home3Offer() {
                           item.images[0].url;
                         let fullPath = "";
                         if (image) {
-                          fullPath = `http://localhost:3002/${image}`;
+                          fullPath = `https://api.petshop.hieshop.click/${image}`;
                         } else {
                           fullPath = "assets/images/bg/h3-offer-right2.png";
                         }

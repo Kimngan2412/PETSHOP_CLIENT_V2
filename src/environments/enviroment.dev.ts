@@ -1,3 +1,3 @@
 export const environment = {
-  baseURL: "http://localhost:3002",
+  baseURL: "https://api.petshop.hieshop.click",
 };

@@ -3,7 +3,7 @@ import axios from "axios";
 // Add a request interceptor
 axios.interceptors.request.use(
   function (config: any) {
-    config.baseURL = "https://api.petshop.hieshop.click";
+    config.baseURL = "http://api.petshop.hieshop.click";
     const token = localStorage.getItem("accessToken");
     config.headers.Authorization = token ? `Bearer ${token}` : "";
 

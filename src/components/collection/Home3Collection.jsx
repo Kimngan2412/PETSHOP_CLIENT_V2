@@ -1,17 +1,11 @@
-import Link from "next/link";
-import React from "react";
-import petCollection from "../../data/petCollection.json";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
-import { useRouter } from "next/router";
-import { fetchProduct as getDetailProduct } from "../../store/apps/products";
-import { addToWishlist } from "../../store/apps/wishlists";
 import axios from "axios";
-import { AUTH_ENDPOINT } from "../../api/endpoint";
-import { useState } from "react";
+import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
+import { AUTH_ENDPOINT } from "../../api/endpoint";
 import { addToCart } from "../../store/apps/carts";
+import { addToWishlist } from "../../store/apps/wishlists";
 
 function Home3Collection() {
   const store = useSelector((state) => state.products);

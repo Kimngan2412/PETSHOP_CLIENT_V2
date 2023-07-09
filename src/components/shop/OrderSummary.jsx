@@ -1,8 +1,7 @@
-import React, { useEffect, useContext } from "react";
-import ProductPriceCount from "./ProductPriceCount";
-import { LoadingContext } from "../../context/loading-context";
-import { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
+import { LoadingContext } from "../../context/loading-context";
+import ProductPriceCount from "./ProductPriceCount";
 
 function OrderSummary({ cart }) {
   const { setLoading } = useContext(LoadingContext);

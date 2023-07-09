@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { AUTH_ENDPOINT } from "../../api/endpoint";
 import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
+import { AUTH_ENDPOINT } from "../../api/endpoint";
 function PasswordForm() {
   const dispatch = useDispatch();
   const [userInfo, setUserInfo] = useState(null);

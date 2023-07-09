@@ -1,19 +1,13 @@
 import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import Banner3 from "../components/banner/Banner3";
-import Home3Blog from "../components/blog/Home3Blog";
 import Home3Category from "../components/category/Home3Category";
 import Home3Collection from "../components/collection/Home3Collection";
 import Footer3 from "../components/footer/Footer3";
 import Header3 from "../components/header/Header3";
-import Home3EssentialItems from "../components/item/Home3EssentialItems";
-import Home3Newslatter from "../components/newslatter/Home3Newslatter";
-import Home3Offer from "../components/offer/Home3Offer";
 import OfferBanner from "../components/offer/OfferBanner";
-import Home3Testimonial from "../components/testimonial/Home3Testimonial";
-import { useDispatch } from "react-redux";
 import { fetchData as getCategories } from "../store/apps/categories";
 import { fetchData as getProducts } from "../store/apps/products";
-import { AppDispatch } from "../store";
 const defaultData = {
   keyword: "",
   status: "",

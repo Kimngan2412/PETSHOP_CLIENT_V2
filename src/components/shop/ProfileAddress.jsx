@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from "react";
-import { AUTH_ENDPOINT } from "../../api/endpoint";
 import axios from "axios";
-import { toast } from "react-toastify";
-import {
-  fetchAddress,
-  fetchData,
-  updateAddress,
-  createAddress,
-} from "../../store/apps/address";
+import React, { useEffect, useState } from "react";
+import { Controller, useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
+import { toast } from "react-toastify";
+import { AUTH_ENDPOINT } from "../../api/endpoint";
 import { defaultAddress } from "../../constants";
-import { useForm, Controller } from "react-hook-form";
+import {
+  createAddress,
+  fetchAddress,
+  updateAddress,
+} from "../../store/apps/address";
 let defaultValues = {
   firstName: "",
 };

@@ -11,12 +11,6 @@ export interface DataParams {
   page: number;
   limit: number;
 }
-
-// interface TakeProxyNote {
-//   key: string
-//   note: string
-// }
-
 export const fetchData = createAsyncThunk(
   "categories/get",
   async (params?: DataParams) => {

@@ -1,10 +1,7 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 
 function BillingDetails({ userInfor }) {
-  useEffect(() => {
-    // console.log("userInfor", userInfor);
-  }, [userInfor]);
+  useEffect(() => {}, [userInfor]);
   return (
     <>
       <div className="form-wrap box--shadow mb-30">

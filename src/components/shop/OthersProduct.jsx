@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useMemo, useEffect, useState } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import SwiperCore, {
   Autoplay,

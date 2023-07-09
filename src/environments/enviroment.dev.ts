@@ -1,3 +1,3 @@
 export const environment = {
-  baseURL: "http://api.petshop.hieshop.click",
+  baseURL: "https://api.petshop.hieshop.click",
 };

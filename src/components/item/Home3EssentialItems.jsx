@@ -88,7 +88,7 @@ function Home3EssentialItems() {
                       item.images[0].url;
                     let fullPath = "";
                     if (image) {
-                      fullPath = `http://api.petshop.hieshop.click/${image}`;
+                      fullPath = `https://api.petshop.hieshop.click/${image}`;
                     } else {
                       fullPath =
                         "../assets/images/bg/category/h3-collection-01.png";

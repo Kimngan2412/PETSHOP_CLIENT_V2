@@ -82,7 +82,7 @@ function CartPage() {
                         const detailLink = `/product-detail/${value.id}`;
                         const image =
                           value.images && value.images[0]?.url
-                            ? `http://api.petshop.hieshop.click/${value.images[0]?.url}`
+                            ? `https://api.petshop.hieshop.click/${value.images[0]?.url}`
                             : "assets/images/bg/cart-01.png";
                         return (
                           <tr key={value.id}>

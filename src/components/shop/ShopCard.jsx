@@ -24,6 +24,7 @@ function ShopCard({ selectedCategories }) {
   const dispatch = useDispatch();
   const [userInfo, setUserInfo] = useState(null);
   const { setLoading } = useContext(LoadingContext);
+  const [keyword, setKeyword] = useState("");
 
   useEffect(() => {
     const fetchUserInfo = async () => {
@@ -49,6 +50,7 @@ function ShopCard({ selectedCategories }) {
             limit: defaultParam.limit,
             page: currentPage,
             categoriesId: categoriesId,
+            keyword: keyword,
           },
         });
         const responseData = response.data;
@@ -60,7 +62,7 @@ function ShopCard({ selectedCategories }) {
       }
     };
     fetchProducts();
-  }, [currentPage, selectedCategories]);
+  }, [currentPage, selectedCategories, keyword]);
 
   const handlePreviousPage = () => {
     if (currentPage > 1) {
@@ -103,25 +105,24 @@ function ShopCard({ selectedCategories }) {
         <h6>shop</h6>
         <div className="multiselect-area">
           <div className="single-select">
-            <span>Search</span>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Search"
-              // onChange={handleSearch}
-            />
-          </div>
-          {/* <div className="single-select two">
-            <select
-              style={{ outline: "none" }}
-              className="defult-select-drowpown"
-              id="eyes-dropdown"
+            <form
+              className="mobile-menu-form"
+              onSubmit={(e) => {
+                e.preventDefault();
+              }}
             >
-              <option>Default</option>
-              <option>Grid</option>
-              <option>Closed</option>
-            </select>
-          </div> */}
+              <div className="input-with-btn d-flex align-items-center">
+                <i className="bi bi-search me-3"></i>
+                <input
+                  type="text"
+                  placeholder="Search here..."
+                  style={{ background: "#f7f7f7" }}
+                  value={keyword}
+                  onChange={(e) => setKeyword(e.target.value)}
+                />
+              </div>
+            </form>
+          </div>
         </div>
       </div>
       {productsToShow &&
@@ -134,6 +135,7 @@ function ShopCard({ selectedCategories }) {
           } else {
             fullPath = "assets/images/bg/category/h3-collection-01.png";
           }
+          const comment = item.comments;
 
           return (
             <div className="col-lg-4 col-md-4 col-sm-6" key={item.id}>
@@ -190,7 +192,7 @@ function ShopCard({ selectedCategories }) {
                     </Link>
                   </h4>
                   <div className="price">
-                    <del>${item.originalPrice}$</del>
+                    <h6>${item.originalPrice}</h6>
                   </div>
                   <div className="review">
                     <ul>
@@ -209,6 +211,7 @@ function ShopCard({ selectedCategories }) {
                       <li>
                         <i className="bi bi-star-fill" />
                       </li>
+                      <span>({comment.length})</span>
                     </ul>
                   </div>
                 </div>

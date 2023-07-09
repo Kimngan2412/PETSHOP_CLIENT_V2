@@ -84,6 +84,7 @@ function Home3Collection() {
               } else {
                 fullPath = "assets/images/bg/category/h3-collection-01.png";
               }
+              const comment = item.comments;
               return (
                 <div className="col-lg-3 col-md-4 col-sm-6" key={item.id}>
                   <div className="collection-card">
@@ -168,6 +169,7 @@ function Home3Collection() {
                           <li>
                             <i className="bi bi-star-fill" />
                           </li>
+                          <span>({comment.length})</span>
                         </ul>
                       </div>
                     </div>

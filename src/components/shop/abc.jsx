@@ -146,34 +146,15 @@ function Shop() {
             <div className="col-lg-9">
               <div className="row mb-50">
                 <div className="col-lg-12">
-                  <div className="multiselect-bar">
-                    <h6>shop</h6>
-                    <div className="multiselect-area">
-                      <div className="single-select">
-                        <span>Show</span>
-                        <select
-                          className="defult-select-drowpown"
-                          id="color-dropdown"
-                        >
-                          <option>12</option>
-                          <option>15</option>
-                          <option>18</option>
-                          <option>21</option>
-                          <option>25</option>
-                        </select>
+                  <div className="single-select">
+                    <form className="mobile-menu-form">
+                      <div className="input-with-btn d-flex flex-column">
+                        <input type="text" placeholder="Search here..." />
+                        <button className="primary-btn1" type="submit">
+                          Search
+                        </button>
                       </div>
-                      <div className="single-select two">
-                        <select
-                          style={{ outline: "none" }}
-                          className="defult-select-drowpown"
-                          id="eyes-dropdown"
-                        >
-                          <option>Default</option>
-                          <option>Grid</option>
-                          <option>Closed</option>
-                        </select>
-                      </div>
-                    </div>
+                    </form>
                   </div>
                 </div>
               </div>

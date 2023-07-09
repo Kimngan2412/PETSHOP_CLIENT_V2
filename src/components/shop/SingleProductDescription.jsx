@@ -57,18 +57,21 @@ function SingleProductDescription() {
         productsId: productDetail.id,
         userId: userInfo,
       };
-
-      dispatch(addComment(commentData)).then(() => {
-        dispatch(fetchComment(productDetail.id)).then((res) => {
-          const comment = res.payload;
-          const commentCount = comment.length;
-          setComments(res);
-          setNoComments(commentCount === 0);
+      if (userInfo !== null) {
+        dispatch(addComment(commentData)).then(() => {
+          dispatch(fetchComment(productDetail.id)).then((res) => {
+            const comment = res.payload;
+            const commentCount = comment.length;
+            setComments(res);
+            setNoComments(commentCount === 0);
+          });
+          toast.success("Add review successfully");
         });
-        toast.success("Add review successfully");
-      });
 
-      setCommentContent("");
+        setCommentContent("");
+      } else {
+        toast.error("Please login");
+      }
     }
   };
   const handleDeleteComment = (userId, commentId) => {
@@ -164,9 +167,6 @@ function SingleProductDescription() {
                           <p>No review for product</p>
                         ) : (
                           comments?.payload?.map((item) => {
-                            {
-                              /* console.log("item", item); */
-                            }
                             const fullName = `${item.user?.firstName} ${item.user?.lastName}`;
                             const date = new Date(`${item?.createdAt}`);
                             const year = date.getFullYear();

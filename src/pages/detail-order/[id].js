@@ -26,6 +26,12 @@ function DetailOrderPage() {
   }, [dispatch, id]);
   console.log("ssssaaa", orderDetail);
 
+  useEffect(() => {
+    if (!localStorage.getItem("accessToken")) {
+      router.push("/login");
+    }
+  }, []);
+
   let totalPrice = 0;
   const shippingStatus = orderDetail?.shipping.status;
   const orderDay = orderDetail?.createdAt;

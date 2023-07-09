@@ -101,12 +101,14 @@ function OrderPage() {
 
                         <tbody>
                           {item.orderDetails?.map((product) => {
-                            console.log(product);
+                            console.log("product", product);
                             const image =
                               product.product?.images &&
                               product.product?.images.length > 0 &&
                               product.product?.images[0].url;
                             console.log(image);
+                            const id = product.product.id;
+                            console.log("id", id);
                             let fullPath = "";
                             if (image) {
                               fullPath = `https://api.petshop.hieshop.click/${image}`;
@@ -122,7 +124,10 @@ function OrderPage() {
                                   </td>
 
                                   <td data-label="Food Name">
-                                    <Link legacyBehavior href="/shop-details">
+                                    <Link
+                                      legacyBehavior
+                                      href={`/product-detail/${id}`}
+                                    >
                                       <a>{product.product?.productName}</a>
                                     </Link>
                                   </td>

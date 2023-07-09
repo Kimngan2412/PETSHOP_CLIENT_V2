@@ -99,6 +99,31 @@ function ShopCard({ selectedCategories }) {
 
   return (
     <>
+      <div className="multiselect-bar">
+        <h6>shop</h6>
+        <div className="multiselect-area">
+          <div className="single-select">
+            <span>Search</span>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Search"
+              // onChange={handleSearch}
+            />
+          </div>
+          {/* <div className="single-select two">
+            <select
+              style={{ outline: "none" }}
+              className="defult-select-drowpown"
+              id="eyes-dropdown"
+            >
+              <option>Default</option>
+              <option>Grid</option>
+              <option>Closed</option>
+            </select>
+          </div> */}
+        </div>
+      </div>
       {productsToShow &&
         productsToShow.map((item) => {
           const image =

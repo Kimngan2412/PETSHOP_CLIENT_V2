@@ -73,13 +73,13 @@ function Shop() {
               </div>
             </div>
             <div className="col-lg-9">
-              <div className="row mb-50">
+              {/* <div className="row mb-50">
                 <div className="col-lg-12">
                   <div className="multiselect-bar">
                     <h6>shop</h6>
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className="row g-4 justify-content-center">
                 <ShopCard selectedCategories={selectedCategories} />
               </div>

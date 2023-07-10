@@ -110,7 +110,8 @@ function CartPage() {
                             </td>
                             <td data-label="Quantity">
                               <div className="quantity d-flex align-items-center">
-                                <div className="quantity-nav nice-number d-flex align-items-center">
+                                <span>{value.quantity}</span>
+                                {/* <div className="quantity-nav nice-number d-flex align-items-center">
                                   <ItemCounter
                                     count={value.quantity}
                                     onChange={(count) =>
@@ -118,7 +119,7 @@ function CartPage() {
                                     }
                                     maxCount={10}
                                   />
-                                </div>
+                                </div> */}
                               </div>
                             </td>
                             <td data-label="Subtotal">

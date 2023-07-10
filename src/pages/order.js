@@ -21,7 +21,6 @@ function OrderPage() {
   useEffect(() => {
     const fetchUserInfo = async () => {
       try {
-        // setLoading(true); // Show loading indicator
         const response = await axios.get(AUTH_ENDPOINT.GET_ME);
         const userData = response.data;
         console.log("userData1", userData);

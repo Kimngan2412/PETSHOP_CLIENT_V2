@@ -54,7 +54,6 @@ function Header3() {
     };
     fetchUserInfo();
   }, [userInfo]);
-  // console.log("userInfouserInfouserInfo", userInfo);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {

@@ -1,14 +1,14 @@
 import Link from "next/link";
-import React, { useEffect, useState, useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import Breadcrumb from "../components/breadcrumb/Breadcrumb";
 import ItemCounter from "../components/shop/ProductCount";
-import Layout from "../layout/Layout";
-import { useDispatch } from "react-redux";
 import { LoadingContext } from "../context/loading-context";
+import Layout from "../layout/Layout";
 import {
   fetchData,
-  updateQuantity,
   removeProductFromCart,
+  updateQuantity,
 } from "../store/apps/carts";
 function CartPage() {
   const { setLoading } = useContext(LoadingContext);
@@ -21,6 +21,7 @@ function CartPage() {
     dispatch(updateQuantity({ item: value, quantity: count })).then((res) => {
       dispatch(fetchData()).then((res) => {
         if (res?.payload) {
+          console.log("resssssss", res);
           setCart(res?.payload);
         }
       });
@@ -54,6 +55,7 @@ function CartPage() {
         setLoading(false);
       });
   }, [dispatch]);
+
   return (
     <Layout>
       <Breadcrumb pageName="Cart" pageTitle="Cart" />
@@ -76,6 +78,7 @@ function CartPage() {
                   <tbody>
                     {cart && cart.length > 0 ? (
                       cart.map((value, index) => {
+                        console.log("value", value);
                         total +=
                           Number(value.originalPrice?.replaceAll("$", "")) *
                           value.quantity;
@@ -113,6 +116,7 @@ function CartPage() {
                                     onChange={(count) =>
                                       handleCountChange(value, count)
                                     }
+                                    maxCount={10}
                                   />
                                 </div>
                               </div>

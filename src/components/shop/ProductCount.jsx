@@ -10,18 +10,19 @@ function reducer(state, action) {
       throw new Error();
   }
 }
-function ItemCounter({ count, onChange }) {
+function ItemCounter({ count, maxCount, onChange }) {
   const [state, dispatch] = useReducer(reducer, { count: count ?? 1 });
 
   const increment = () => {
-    dispatch({ type: "increment" });
-    onChange && onChange(state.count + 1)
+    if (state.count < maxCount) {
+      dispatch({ type: "increment" });
+      onChange && onChange(state.count + 1);
+    }
   };
-
   const decrement = () => {
     if (state.count > 1) {
       dispatch({ type: "decrement" });
-      onChange && onChange(state.count - 1)
+      onChange && onChange(state.count - 1);
     }
   };
 

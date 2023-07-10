@@ -147,7 +147,7 @@ function OthersProduct() {
                           </Link>
                         </h4>
                         <div className="price">
-                          <h6>{item.originalPrice}</h6>
+                          <h6>${item.originalPrice}</h6>
                         </div>
                         <div className="review">
                           <ul>

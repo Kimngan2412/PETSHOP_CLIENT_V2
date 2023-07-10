@@ -28,8 +28,12 @@ function Home3Collection() {
   }, []);
 
   const handleAddToCart = (item) => {
-    dispatch(addToCart({ item: item, quantity: 1 }));
-    toast.success(`Added ${item.productName} into cart`);
+    if (item.quantity > 0) {
+      dispatch(addToCart({ item: item, quantity: 1 }));
+      toast.success(`Added ${item.productName} into cart`);
+    } else {
+      toast.error("The product is out of stock");
+    }
   };
 
   const handleAddWishList = (item) => {
@@ -122,7 +126,7 @@ function Home3Collection() {
                       </div>
                       <ul className="cart-icon-list">
                         <li onClick={() => handleAddToCart(item)}>
-                          <a href="#">
+                          <a>
                             <img
                               src="assets/images/icon/Icon-cart3.svg"
                               alt=""

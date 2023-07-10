@@ -82,7 +82,7 @@ function ProfileAddressCheckout(props, ref) {
                         {...field}
                         type="text"
                         // name="fname"
-                        placeholder="House and street name"
+                        placeholder="Street and address"
                       />
                     )}
                   />
@@ -98,7 +98,7 @@ function ProfileAddressCheckout(props, ref) {
                         {...field}
                         type="text"
                         // name="fname"
-                        placeholder="House and street name"
+                        placeholder="City"
                       />
                     )}
                   />
@@ -116,7 +116,7 @@ function ProfileAddressCheckout(props, ref) {
                         {...field}
                         type="text"
                         // name="fname"
-                        placeholder="House and street name"
+                        placeholder="First Name"
                       />
                     )}
                   />
@@ -128,11 +128,7 @@ function ProfileAddressCheckout(props, ref) {
                     name="lastName"
                     control={control}
                     render={({ field }) => (
-                      <input
-                        {...field}
-                        type="text"
-                        placeholder="House and street name"
-                      />
+                      <input {...field} type="text" placeholder="Last Name" />
                     )}
                   />
                 </div>
@@ -147,7 +143,7 @@ function ProfileAddressCheckout(props, ref) {
                         {...field}
                         type="text"
                         // name="fname"
-                        placeholder="House and street name"
+                        placeholder="Email"
                       />
                     )}
                   />
@@ -163,7 +159,7 @@ function ProfileAddressCheckout(props, ref) {
                         {...field}
                         type="text"
                         // name="fname"
-                        placeholder="House and street name"
+                        placeholder="Phone Number"
                       />
                     )}
                   />

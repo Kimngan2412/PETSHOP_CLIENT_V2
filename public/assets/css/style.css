@@ -13116,7 +13116,6 @@ footer.style2 .social-area ul li:hover a i {
   width: 100%;
   overflow-x: auto;
   margin-bottom: 32px;
-
 }
 .table-wrapper .eg-table {
   width: 100%;
@@ -14378,7 +14377,7 @@ footer.style2 .social-area ul li:hover a i {
   position: relative;
 }
 
-.form-wrapper-relative{
+.form-wrapper-relative {
   position: relative;
 }
 
@@ -14419,7 +14418,7 @@ footer.style2 .social-area ul li:hover a i {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-.form-wrapper .forgot-pass::after {
+/* .form-wrapper .forgot-pass::after {
   content: "";
   position: absolute;
   left: 0;
@@ -14427,7 +14426,7 @@ footer.style2 .social-area ul li:hover a i {
   background: var(--primary-color3);
   height: 1px;
   width: 100%;
-}
+} */
 @media (max-width: 576px) {
   .form-wrapper .forgot-pass::after {
     display: none;

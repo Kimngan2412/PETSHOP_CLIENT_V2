@@ -82,6 +82,8 @@ function CartPage() {
                         total +=
                           Number(value.originalPrice?.replaceAll("$", "")) *
                           value.quantity;
+                        console.log("total", total);
+
                         const detailLink = `/product-detail/${value.id}`;
                         const image =
                           value.images && value.images[0]?.url
@@ -106,7 +108,7 @@ function CartPage() {
                               </Link>
                             </td>
                             <td data-label="Unite Price">
-                              <span>{value.originalPrice}</span>
+                              <span>${value.originalPrice}</span>
                             </td>
                             <td data-label="Quantity">
                               <div className="quantity d-flex align-items-center">

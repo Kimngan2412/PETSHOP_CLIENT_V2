@@ -176,7 +176,7 @@ function ProductDetails() {
                 Add to cart
               </button>
             </div>
-            <div className="buy-now-btn">
+            <div className="buy-now-btn" onClick={handleAddToCart}>
               <Link legacyBehavior href="/cart">
                 <a>Buy Now</a>
               </Link>

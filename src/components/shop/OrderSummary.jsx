@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { LoadingContext } from "../../context/loading-context";
 import ProductPriceCount from "./ProductPriceCount";
-
+import Link from "next/link";
 function OrderSummary({ cart }) {
   const { setLoading } = useContext(LoadingContext);
   const dispatch = useDispatch();
@@ -34,9 +34,14 @@ function OrderSummary({ cart }) {
                   </div>
                   <div className="product-info">
                     <h5 className="product-title">
-                      <a href="#">{item.productName}</a>
+                      <Link legacyBehavior href={`/product-detail/${item.id}`}>
+                        <a>{item.productName}</a>
+                      </Link>
                     </h5>
-                    <ProductPriceCount count={item.quantity} price={price} />
+                    <h6>
+                      Price: ${item.originalPrice} x {item.quantity}
+                    </h6>
+                    {/* <ProductPriceCount count={item.quantity} price={price} /> */}
                   </div>
                 </li>
               );

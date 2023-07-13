@@ -25,8 +25,8 @@ function OrderSummary({ cart }) {
               total += price;
               const detailLink = `/product-detail/${item.id}`;
               const image =
-                "https://api.petshop.hieshop.click/" + item.images[0]?.url ??
-                "assets/images/bg/cart-01.png";
+                "https://kimngan2412-petshop.onrender.com/" +
+                  item.images[0]?.url ?? "assets/images/bg/cart-01.png";
               return (
                 <li className="single-product d-flex justify-content-start">
                   <div className="product-img">

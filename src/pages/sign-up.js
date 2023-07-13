@@ -62,7 +62,7 @@ function signUpPage() {
       })
       .catch((err) => {
         console.log("err", err);
-        toast.error(`Something went wrong, please try again!`);
+        toast.error(`UserName or Email already exits!`);
       });
   };
 

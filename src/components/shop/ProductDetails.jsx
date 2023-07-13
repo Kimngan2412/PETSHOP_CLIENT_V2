@@ -68,7 +68,7 @@ function ProductDetails() {
               productDetail.images?.map((image, index) => {
                 const className =
                   "tab-pane fade " + (index == 0 ? "active show" : "");
-                const url = `https://api.petshop.hieshop.click/${image.url}`;
+                const url = `https://kimngan2412-petshop.onrender.com/${image.url}`;
                 const id = `v-pills-img${index + 1}`;
                 return (
                   <div
@@ -106,7 +106,7 @@ function ProductDetails() {
             {productDetail &&
               productDetail.images?.map((image, index) => {
                 const className = "nav-link " + (index == 0 ? "active" : "");
-                const url = `https://api.petshop.hieshop.click/${image.url}`;
+                const url = `https://kimngan2412-petshop.onrender.com/${image.url}`;
                 const id = `v-pills-img${index + 1}-tab`;
                 const dataBsTarget = `#v-pills-img${index + 1}`;
                 const ariaControls = `v-pills-img${index + 1}`;

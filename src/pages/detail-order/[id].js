@@ -200,7 +200,7 @@ function DetailOrderPage() {
                       totalPrice += parseFloat(item.totalPrice) * item.quantity;
                       let fullPath = "";
                       if (image) {
-                        fullPath = `https://api.petshop.hieshop.click/${image}`;
+                        fullPath = `https://kimngan2412-petshop.onrender.com/${image}`;
                       } else {
                         fullPath =
                           "assets/images/bg/category/h3-collection-01.png";
